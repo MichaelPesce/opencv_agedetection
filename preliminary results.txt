@@ -1,0 +1,15 @@
+total twitter accounts queried: 1000
+total accounts that had downloadable profile picture: 749
+total accounts that I could detect a face: 589
+
+589/1000 (59%) of accounts had face
+589/749 (79%) pro pics had face
+
+(0-2) 50
+(4-6) 98
+(8-12) 66
+(15-20) 21
+(25-32) 164
+(38-43) 136
+(48-53) 45
+(60-100) 9
