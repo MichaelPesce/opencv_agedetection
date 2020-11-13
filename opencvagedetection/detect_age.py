@@ -22,16 +22,16 @@ def start(args):
 	#weightsPath = os.path.sep.join([args["face"],
 	#	"res10_300x300_ssd_iter_140000.caffemodel"])
 
-	prototxtPath = "face_detector\\deploy.prototxt"
-	weightsPath = "face_detector\\res10_300x300_ssd_iter_140000.caffemodel"
+	prototxtPath = args['currentDir']+"face_detector\\deploy.prototxt"
+	weightsPath = args['currentDir']+"face_detector\\res10_300x300_ssd_iter_140000.caffemodel"
 	faceNet = cv2.dnn.readNet(prototxtPath, weightsPath)
 
 	# load our serialized age detector model from disk
 	#print("[INFO] loading age detector model...")
 	#prototxtPath = os.path.sep.join([args["age"], "age_deploy.prototxt"])
 	#weightsPath = os.path.sep.join([args["age"], "age_net.caffemodel"])
-	prototxtPath = "age_detector\\age_deploy.prototxt"
-	weightsPath = "age_detector\\age_net.caffemodel"
+	prototxtPath = args['currentDir']+"age_detector\\age_deploy.prototxt"
+	weightsPath = args['currentDir']+"age_detector\\age_net.caffemodel"
 
 	ageNet = cv2.dnn.readNet(prototxtPath, weightsPath)
 
@@ -42,7 +42,7 @@ def start(args):
 		(104.0, 177.0, 123.0))
 
 	# pass the blob through the network and obtain the face detections
-	print("[INFO] computing face detections...")
+	#print("[INFO] computing face detections...")
 	faceNet.setInput(blob)
 	detections = faceNet.forward()
 

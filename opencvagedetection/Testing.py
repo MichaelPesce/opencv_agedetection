@@ -1,5 +1,6 @@
 import detect_age
 from time import time
+import os; 
 
 
 def getUsers():
@@ -44,5 +45,6 @@ def main():
 
     elapsed_time = time() - start_time
     print('this process took ' + str(elapsed_time) + ' seconds')
+
 
 main()

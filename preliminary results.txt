@@ -13,3 +13,6 @@ total accounts that I could detect a face: 589
 (38-43) 136
 (48-53) 45
 (60-100) 9
+
+this process took 105.22109317779541 seconds
+7.1 pictures analyzed per second
